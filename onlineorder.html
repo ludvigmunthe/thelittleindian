@@ -9,6 +9,8 @@
     <title>The Little Indian</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body id="onlineorder">
     <div class="grid">
@@ -30,12 +32,14 @@
         </div>
         <div class="sidebar">
             <div class="sidebar_menu">
-                <button id="btn"><i class="fa fa-bars"></i></button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="catering.html">Catering</a></li>
-                </ul>
+                <button id="btn" onclick="menuFunction()"><i class="fa fa-bars"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="header" id="online-header">
@@ -49,9 +53,9 @@
                 <p>If you wish to enjoy our food at home, place your order with one of our affiliates!</p>
             </div>
             <div class="options">
-                <a href="https://www.foodora.se/restaurant/cptv/the-little-indian"><img src="pics/foodora.png" width="200" height="200" alt="foodora"></a>
-                 <a href="https://wolt.com/en/swe/umea/restaurant/the-little-indian"><img src="pics/wolt.webp" width="200" height="200" alt="wolt"></a>
-                 <a href="https://app.fasterorder.se/menu/sv/226"><img src="pics/fasterorder.jpeg" width="200" height="200" alt="faster order"></a>
+                <a href="https://www.foodora.se/restaurant/cptv/the-little-indian"><img src="pics/foodora.png" width="200" height="200" alt="foodora" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
+                <a href="https://wolt.com/en/swe/umea/restaurant/the-little-indian"><img src="pics/wolt.webp" width="200" height="200" alt="wolt" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
+                <a href="https://app.fasterorder.se/menu/sv/226"><img src="pics/fasterorder.jpeg" width="200" height="200" alt="faster order" onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
             </div>
         </div>
         <div class="footer">

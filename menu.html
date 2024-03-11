@@ -9,6 +9,9 @@
     <title>The Little Indian</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="randomizer.js"></script>
 </head>
 <body id="menu">
     <div class="grid">
@@ -30,12 +33,14 @@
         </div>
         <div class="sidebar">
             <div class="sidebar_menu">
-                <button id="btn"><i class="fa fa-bars"></i></button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="onlineorder.html">Online orders</a></li>
-                    <li><a href="catering.html">Catering</a></li>
-                </ul>
+                <button id="btn" onclick="menuFunction()"><i class="fa fa-bars"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="onlineorder.html">Online orders</a></li>
+                        <li><a href="catering.html">Catering</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="header" id="menu-header">
@@ -52,44 +57,64 @@
                 <div class="meny-items">
                     <div class="title"><h2>Förrätter</h2>
                         <div class="single-menu">
-                            <h4>Pappadam</h4>
-                            <p>Indiskt hårtbröd av kikärtsmjöl</p>
-                            <span>25kr</span>
+                            <div id="product1">
+                                <h4>Pappadam</h4>
+                                <p>Indiskt hårtbröd av kikärtsmjöl</p>
+                                <span>25kr</span>
+                            </div>
                         </div>
                         <div class="single-menu">
-                            <h4>Samosa</h4>
-                            <p>Vegetariska piroger med potatis och gröna ärtor, serverade med koriandersås</p>
-                            <span>49kr</span>
+                            <div id="product2">
+                                <h4>Samosa</h4>
+                                <p>Vegetariska piroger med potatis och gröna ärtor, serverade med koriandersås</p>
+                                <span>49kr</span>
+                            </div>
                         </div>
                         <div class="single-menu">
-                            <h4>Vegetarisk Pakora</h4>
-                            <p>Friterade blomkål och paprikasom marinerats i gu rkmeja, kummin, koriander och chilli, serverade med mangoraja</p>
-                            <span>49kr</span>
+                            <div id="product3">
+                                <h4>Vegetarisk Pakora</h4>
+                                <p>Friterade blomkål och paprikasom marinerats i gu rkmeja, kummin, koriander och chilli, serverade med mangoraja</p>
+                                <span>49kr</span>
+                            </div>
                         </div>
                         <div class="single-menu">
-                            <h4>Vårrullar</h4>
-                            <p>Smet-friterade paneer ost med vitlöksås</p>
-                            <span>49kr</span>
+                            <div id="product4">
+                                <h4>Vårrullar</h4>
+                                <p>Smet-friterade paneer ost med vitlöksås</p>
+                                <span>49kr</span>
+                            </div>
                         </div>
                         <div class="single-menu">
-                            <h4>Kyckling Pakora</h4>
-                            <p>Friterade kyckling filé som marinerats i gu rkmeja, kummin, coriander och chilli, serverade med vitlöksås</p>
-                            <span>55kr</span>
+                            <div id="product5">
+                                <h4>Kyckling Pakora</h4>
+                                <p>Friterade kyckling filé som marinerats i gu rkmeja, kummin, coriander och chilli, serverade med vitlöksås</p>
+                                <span>55kr</span>
+                            </div>
                         </div>
                         <div class="single-menu">
-                            <h4>Kyckling drumstick</h4>
-                            <p>Friterade kyckling drumstick</p>
-                            <span>59kr</span>
+                            <div id="product6">
+                                <h4>Kyckling drumstick</h4>
+                                <p>Friterade kyckling drumstick</p>
+                                <span>59kr</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        
+            <div id="flip">
+                Klicka för bilder
+            </div>
+            <div id="panel">
+                <img src="pics/drumstick.jpg" alt="drumstick" height="100" width="100"><img src="pics/Chicken-Pakora.jpg" alt="chickenpakora" height="100" width="100"><img src="pics/springroll.jpg" alt="springroll" height="100" width="100">
+            </div>
         </div>
         <div class="footer">
             
         </div>
         <div class="section">
+            <div id="randomitems">
+                
+            </div>
 
         </div>
     </div>

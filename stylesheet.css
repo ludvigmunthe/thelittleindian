@@ -4,7 +4,7 @@ body{
 
 .grid {
     display: grid;
-    grid-template-columns: auto 3fr 10%;
+    grid-template-columns: auto 3fr auto;
     grid-template-rows: 10% 1fr 2fr 10%;
     grid-template-areas: 
     "topbar topbar topbar"
@@ -28,8 +28,7 @@ body{
     right: 10px;
 }
 
-.sidebar
-{
+.sidebar{
     grid-area: sidebar;
     position: relative;
     background: right no-repeat;
@@ -37,6 +36,33 @@ body{
     height: 100vh;
     width: auto;
     margin: 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    margin: 5px;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content ul li {
+    padding: 10px;
+}
+
+.dropdown-content ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content ul li a:hover {
+    background-color: #ddd;
 }
 #btn{
     background-color: transparent;
@@ -190,7 +216,11 @@ border-radius: 25px;
 
 .section{
     grid-area: section;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+
 
 .footer{
     grid-area: footer;
@@ -198,6 +228,16 @@ border-radius: 25px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+}
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    border: solid 1px #c3c3c3;
+}
+  
+  #panel {
+    padding: 50px;
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
@@ -214,6 +254,5 @@ border-radius: 25px;
         "footer";
     }
 }
-
 
 
